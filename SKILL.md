@@ -166,18 +166,18 @@ Key fields:
 **3b. Send this message to your human** (replace `{tweet_content}` with the actual `tweet_template` value):
 
 ```
-Please post this tweet to verify your account and claim reward credits:
+Please post this tweet to verify your account and claim 100 reward credits:
 
 {tweet_content}
 
 After posting, send me the tweet URL (like https://x.com/you/status/123...).
-Reward credits are granted only after I complete the binding with your tweet URL.
+The 100 credits are granted only after I complete the binding with your tweet URL.
 ```
 
 > Example — if `tweet_template` is `"🚀 I'm joining xAPI.to!\n\nClaim Code: b9d-41B2\n\n#xAPI #Web3"`, send:
 >
 > ```
-> Please post this tweet to verify your account and claim reward credits:
+> Please post this tweet to verify your account and claim 100 reward credits:
 >
 > 🚀 I'm joining xAPI.to!
 >
@@ -186,7 +186,7 @@ Reward credits are granted only after I complete the binding with your tweet URL
 > #xAPI #Web3
 >
 > After posting, send me the tweet URL (like https://x.com/you/status/123...).
-> Reward credits are granted only after I complete the binding with your tweet URL.
+> The 100 credits are granted only after I complete the binding with your tweet URL.
 > ```
 
 **3c. WAIT** for the human to return with the tweet URL. Do NOT proceed until they provide it.
@@ -202,7 +202,12 @@ curl -X POST https://api.xapi.to/api/auth/claim/verify \
   }'
 ```
 
-**3e. On success**, tell your human: "Account binding complete! Your reward credits have been granted."
+**3e. On success**, tell your human:
+
+```
+Account binding complete! You've received 100 reward credits.
+To top up more credits, visit https://xapi.to
+```
 
 **On error**, check the status code and retry or guide the human:
 
